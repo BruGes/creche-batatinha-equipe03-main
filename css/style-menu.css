@@ -1,0 +1,70 @@
+:root {
+    --rosa: #EB339B;
+    --branco: #ffffff;
+    --montserrat: 'Montserrat', sans-serif;
+    --roboto: 'Roboto', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home {
+    display: flexbox;
+}
+
+.logo-claro {
+    height: 180px;
+    margin-left: 50%;
+}
+
+.logo-rosa {
+    display: none;
+}
+
+.menu-container {
+    height: 80px;
+    background: var(--branco);
+    color: var(--rosa);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 10%;
+
+
+}
+
+.btn {
+    padding: 10px 20px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    text-decoration: none;
+
+}
+
+.lista {
+    background: var(--branco);
+    color: var(--rosa);
+    border: 2px solid var(--rosa);
+    border-radius: 4px;
+}
+
+.cadastro {
+    background: var(--rosa);
+    color: var(--branco);
+    border-radius: 4px;
+    border: 2px solid var(--rosa);
+}

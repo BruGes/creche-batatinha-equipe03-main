@@ -24,10 +24,8 @@ body{
 
 @media(max-width:768px){
     .menu-container{
-        height: 200px;
-        
+        height: 200px;   
     }
-
     .logo{
         width: 20%;
         display: none;
