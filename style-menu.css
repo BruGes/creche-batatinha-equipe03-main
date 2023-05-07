@@ -48,6 +48,9 @@ html {
     text-decoration: none;
     
 }
+.menu{
+    display: none;
+}
 .lista{
     background: #ffffff;
     color: #EB339B;
@@ -77,6 +80,10 @@ html {
    }
    .minor-text{
     font-size: 24px;
+   }
+   .menu{
+    display: flex;
+    font-family: 'Montserrat';
    }
   
     .icone-menu{
@@ -108,8 +115,8 @@ html {
     }
     .active{
         display: flex;
+        transition: 1s;
+        font-family: 'Montserrat';
     }
-    .hidden{
-        display: none;
-    }
+    
 }
