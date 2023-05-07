@@ -7,8 +7,13 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+   min-width: 320px;
+   
+
+}
 .home{
-    display: flexbox;
+    display: flex;
 }
 .logo{
     height: 180px;
@@ -20,7 +25,7 @@
 .menu-container{
     height: 80px;
     background: #ffffff;
-    color: #EB339B;
+    color: var(--rosa);
     display: flex;
     align-items: center;
     justify-content: space-between;    
@@ -30,8 +35,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-right: 10%;
-    
     
 }
 .btn{
@@ -56,4 +59,57 @@
     color: #ffffff;
     border-radius: 4px;
     border: 2px solid #EB339B;
+}
+@media(max-width:767px){
+    .menu-container{
+        height: 120px;
+        margin:none;
+        
+    }
+    .logo{
+        margin-left: 0;
+        display: flex;
+    }
+    
+   .front-text{
+    font-size: 32px;
+    flex-shrink: 2;
+   }
+   .minor-text{
+    font-size: 24px;
+   }
+  
+    .icone-menu{
+        border-top: 0.125rem solid;
+        width: 1.25rem;
+        position: relative;
+        left: 5%;
+        
+    }
+    .icone-menu::before,
+    .icone-menu::after{
+        content:  " ";
+        display: block;
+        width: 1.25rem;
+        height: 0.125rem;
+        background-color: currentColor;
+        margin-top: 0.3125rem;
+    }
+    .nav{
+        display: none;
+        background-color: #ffffff;
+        position: absolute;
+        top: 13%;
+        left: 0;
+        width: 100%;
+    }
+    .nav a{
+        width: 100%;
+    }
+    .active{
+        display: flex;
+    }
+    .hidden{
+        display: none;
+    }
 }

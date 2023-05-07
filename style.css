@@ -21,21 +21,3 @@ body{
     font-size: 48px;
     color: rgba(17, 17, 17, 0.48);
 }
-
-@media(max-width:768px){
-    .menu-container{
-        height: 200px;   
-    }
-    .logo{
-        width: 20%;
-        display: none;
-    }
-   .front-text{
-    font-size: 32px;
-    flex-shrink: 2;
-   }
-   .minor-text{
-    font-size: 24px;
-   }
-    
-}
