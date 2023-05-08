@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    min-width: 324px;
+}
 body{
     background: #F5F5F5;
     display: flexbox;
@@ -21,21 +24,6 @@ body{
     font-size: 48px;
     color: rgba(17, 17, 17, 0.48);
 }
-
-@media(max-width:768px){
-    .menu-container{
-        height: 200px;   
-    }
-    .logo{
-        width: 20%;
-        display: none;
-    }
-   .front-text{
-    font-size: 32px;
-    flex-shrink: 2;
-   }
-   .minor-text{
-    font-size: 24px;
-   }
+@media screen and (max-width:768px){
     
 }
