@@ -1,9 +1,9 @@
 body {
-    background-color: #F5F5F5;
+    background-color:var(--cinzaclaro);
 }
 
 .container{
-    background-color:  #FFFFFF;
+    background-color:  var(--branco);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -16,7 +16,7 @@ body {
     border-radius: 8px;
 }
 .titulo-cadastro > h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--montserrat);
     font-size: 32px;
     font-weight: 700;
     margin-top: 40px;
@@ -24,7 +24,7 @@ body {
 }
 
 
-.input-wrapper {
+.input-foto-gato {
     position: relative;
     display: flex;
     align-items: center;
@@ -44,7 +44,7 @@ body {
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
-    color: #fff;
+    color: var(--branco);
     cursor: pointer;
     padding: 10px;
     display: flex;
@@ -60,7 +60,7 @@ body {
     margin-bottom: 150px;
 }
   
-.preview-image {
+.previa-foto {
     max-width: 100%;
     margin-top: 10px;
     align-items: center;
@@ -74,7 +74,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-.pinto{
+.input-forms{
     margin-left: 40px;
     margin-right: 40px;
     height: 56px;
@@ -84,24 +84,42 @@ body {
 }
 input::placeholder {
     text-align: left;
-    padding-top: 30px;
-    padding-left: 16px;
+    padding-bottom: 10px;
+    
+    font-family: var(--roboto);
 }
+input {
+    text-indent: 16px;
+    font-family: var(--roboto);
+  }
 .btn-cadastro{
-border: 1px solid red;
-margin-left: 40px;
-margin-right: 40px;
-margin-bottom: 50px;
+    margin-bottom: 50px;
+    border-radius: 4px;
 }
-#btn-1{
+.botoes-cadastro{
     width:324px ;
     height: 44px;
+    font-family: var(--roboto);
+    font-size: 16px;
+    border-radius: 4px;
+}
+#btn1{
+    background-color: var(--branco);
+    border: 2px solid var(--rosa);
+    color: var(--rosa);
+    margin-right: 10px;
+    padding: 11px 90px;
+    text-decoration: none;
+}
+#btn2{
+    background-color: var(--cinzaescuro);
+    color: var(--branco);
+    border:1px solid transparent;
+    margin-left: 10px;
+    cursor: pointer;
     
 }
-#btn-2 {
-    width:324px ;
-    height: 44px;
+#btn2.btn-preenchido {
+    background-color: var(--rosa);
+    color: white;
 }
-  
-
-  

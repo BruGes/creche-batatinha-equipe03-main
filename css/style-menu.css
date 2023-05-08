@@ -3,6 +3,8 @@
     --branco: #ffffff;
     --montserrat: 'Montserrat', sans-serif;
     --roboto: 'Roboto', sans-serif;
+    --cinzaclaro:  #F5F5F5;
+    --cinzaescuro: #9F9F9F;
 }
 
 * {
@@ -45,7 +47,7 @@
 
 .btn {
     padding: 10px 20px;
-    font-family: 'Roboto';
+    font-family: var(--roboto);
     font-weight: 400;
     font-size: 16px;
     align-items: center;
