@@ -6,10 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style-menu.css">
+    <link rel="stylesheet" href="../css/lancamentos_notas.css">
+    <link rel="stylesheet" href="../css/componentes/card.css">
+    <link rel="stylesheet" href="../css/componentes/botao.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap"
         rel="stylesheet">
     <title>Lançamento de notas</title>
@@ -17,9 +22,9 @@
 
 
 <body>
-
+    <!--
     <header class="cabecalho">
-
+        
         <figure>
             <a href="/index.html"><img src="../assets/Logo-sem-fundo.svg" alt=""></a>
         </figure>
@@ -28,7 +33,19 @@
             <a href="/index.html"><label class="botao" for="">Cadastrar Miau</label></a>
         </div>
     </header>
-
+-->
+    <header>
+        <div class="menu-container">
+            <div class="home">
+                <a href="../index.html"><img src="../assets/Logo Positivo.png" class="logo-claro"></a>
+            </div>
+            <p class="menu">Menu<span class="icone-menu"></span></p>
+            <nav class="nav">
+                <a href="../listagem_de_gatos/index.html" class="btn lista">Ver lista de Miaus</a>
+                <a href="/cadastro_gatos/index.html" class="btn cadastro">Cadastrar Miau</a>
+            </nav>
+        </div>
+    </header>
     <main class="card ">
         <section class="title-lacamento-notas container">
             <a href="../index.html"><button class="seta"></button></a>

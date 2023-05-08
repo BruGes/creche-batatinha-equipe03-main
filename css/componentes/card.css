@@ -1,0 +1,16 @@
+.card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px darkgray;
+    max-width: 752px;
+    padding: 1.75rem;
+    margin: 0 auto;
+}
+
+.container {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
