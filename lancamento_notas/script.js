@@ -28,9 +28,20 @@ btnMenu.addEventListener("click",handleButtonClick);
 
 
 
-// Recuperando gatos do localStorage
+// pegando gatos do localStorage
 const gatosSalvos = JSON.parse(localStorage.getItem("cadastroGato"));
-console.log(gatosSalvos)
+//console.log(gatosSalvos.nomeGato)
+
+const fotoAvata = document.querySelector("#avata");
+const nomeAvata = document.querySelector("h1");
+
+fotoAvata.setAttribute("src", gatosSalvos.foto); 
+nomeAvata.textContent = gatosSalvos.nomeGato;
+
+//falta enviar nota para local storage
+
+
+
 
 /*
 
@@ -42,7 +53,7 @@ gatosSalvos.forEach((avata)=>{
     fotoAvata.setAttribute("src", avata.foto);    
 })
 */
-
+/* 
 const fotoAvata = document.querySelector("#avata");
 const nomeAvata = document.querySelector("h1");
 for (let i = 0; i < gatosSalvos.length; i++) {
@@ -52,3 +63,4 @@ for (let i = 0; i < gatosSalvos.length; i++) {
     console.log(nomeAvata)
     console.log(fotoAvata)
 }
+*/

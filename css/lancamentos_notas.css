@@ -9,9 +9,9 @@
 }
 
 body {
-    background: #F5F5F5;
+    background: var(--background);
     color: #000000;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--montserrat);
 }
 
 .cabecalho {
@@ -20,7 +20,7 @@ body {
     align-items: center;
     max-width: 1440px;
     height: 84px;
-    background-color: #fff;
+    background-color: var(--branco);
     margin-bottom: 25px;
 }
 
@@ -46,16 +46,21 @@ body {
 }
 
 /* componentes */
-
+.container {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
 
 .linha {
     position: absolute;
     bottom: 0;
-    background-color: #DAD9D9;
+    background-color: var(--cinzaescuro);
     width: 100%;
     height: 1px;
 }
-
 .seta {
     background-image: url(/assets/arrow_left_purple.png);
     background-repeat: no-repeat;
@@ -64,17 +69,17 @@ body {
     width: 44px;
     height: 44px;
     border-radius: 100px;
-    border: solid 2px #EB339B;
+    border: solid 2px var(--rosa);
     cursor: pointer;
 }
 
 .seta:hover {
-    background-color: #9F9F9F;
+    background-color: var(--cinzaescuro);
     background-image: url(/assets/arrow_left_white.png);
 }
 
 .seta:active {
-    background-color: #EB339B;
+    background-color: var(--rosa);
     background-image: url(/assets/arrow_left_white.png);
 }
 
@@ -91,7 +96,7 @@ body {
 
 .linha-title {
     position: absolute;
-    background-color: #DAD9D9;
+    background-color: var(--cinzaescuro);
     width: 100%;
     height: 1px;
     bottom: -2rem;
@@ -107,12 +112,12 @@ body {
 .logo-gato img {
     width: 56px;
     height: 56px;
-    border: 2px solid #FFFFFF;
+    border: 2px solid var(--branco);
     border-radius: 100px;
 }
 
 .data {
-    color: #5A5A5A;
+    color: var(--cinzaescuro);
 }
 
 /*======================================*/
@@ -176,14 +181,8 @@ body {
     background-size: 100%;
 }
 
-/*=========Responsivo==========
-*/
+/*=========Responsivo==========*/
 @media(max-width: 720px) {
-    .card {
-        max-width: 370px;
-        margin: 0 auto;
-    }
-
     .title-lacamento-notas {
         height: 100px;
         display: flex;
@@ -193,7 +192,9 @@ body {
     .title-lacamento-notas a {
         width: 80px;
     }
-
+    .container{
+    height: 90px;
+    }
     .logo-gato {
         display: flex;
         justify-content: center;
@@ -237,17 +238,4 @@ body {
         font-size: 12px;
     }
 
-    .botao-responsivo {
-        display: flex;
-        flex-direction: row;
-    }
-
-}
-
-/*
-@media(min-width: 1200px) {
-    .container {
-        padding-left: calc((100vw - 900px)/2);
-        padding-right: calc((100vw - 900px)/2);
-    }
 }
