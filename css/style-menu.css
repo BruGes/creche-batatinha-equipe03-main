@@ -10,16 +10,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-.home {
-    display: flexbox;
-}
-
 .logo-claro {
-    height: 180px;
-    
+    height: 180px;   
 }
-
 .logo-rosa {
     display: none;
 }
@@ -38,7 +31,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
 }
 .btn{
     padding: 10px 20px;
@@ -57,7 +49,6 @@
     border: 2px solid var(--rosa);
     border-radius: 4px;
 }
-
 .cadastro {
     background: var(--rosa);
     color: var(--branco);
@@ -71,7 +62,6 @@
     .menu-container{
         height: 120px;
         margin:none;
-        
     }
     .logo{
         margin-left: 0;
@@ -87,15 +77,13 @@
    }
    .menu{
     display: flex;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat';   
    }
-  
     .icone-menu{
         border-top: 0.125rem solid;
         width: 1.25rem;
         position: relative;
         left: 5%;
-        
     }
     .icone-menu::before,
     .icone-menu::after{
@@ -109,9 +97,6 @@
     .nav{
         display: none;
         background-color: #ffffff;
-        position: absolute;
-        top: 13%;
-        left: 0;
         width: 100%;
     }
     .nav a{
@@ -121,6 +106,6 @@
         display: flex;
         transition: 1s;
         font-family: 'Montserrat';
+        padding-bottom: 2%;
     }
-    
 }
