@@ -4,7 +4,7 @@
     --background: #F5F5F5;
     --montserrat: 'Montserrat', sans-serif;
     --roboto: 'Roboto', sans-serif;
-    --cinzaclaro:  #F5F5F5;
+    --cinzaclaro: #F5F5F5;
     --cinzaescuro: #9F9F9F;
 }
 
@@ -20,11 +20,6 @@
 
 .logo-claro {
     height: 180px;
-
-}
-
-.logo-rosa {
-    display: none;
 }
 
 .menu-container {
