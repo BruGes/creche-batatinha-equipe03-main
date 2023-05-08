@@ -57,7 +57,7 @@ body {
 }
 
 .seta {
-    background-image: url(../assets/arrow_left_purple.png);
+    background-image: url(/assets/arrow_left_purple.png);
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
@@ -70,12 +70,12 @@ body {
 
 .seta:hover {
     background-color: #9F9F9F;
-    background-image: url(../assets/arrow_left_white.png);
+    background-image: url(/assets/arrow_left_white.png);
 }
 
 .seta:active {
     background-color: #EB339B;
-    background-image: url(../assets/arrow_left_white.png);
+    background-image: url(/assets/arrow_left_white.png);
 }
 
 /*fim componentes*/
@@ -147,7 +147,7 @@ body {
 }
 
 .pata {
-    background: url('../assets/pata-nao-pintada-menor.png') no-repeat;
+    background: url('/assets/pata-nao-pintada-menor.png') no-repeat;
     background-size: 100%;
     width: 45px;
     height: 42px;
@@ -155,7 +155,7 @@ body {
 }
 
 .containerPatas:hover .on::before {
-    content: url("../assets/pata-pintada-menor.png");
+    content: url("/assets/pata-pintada-menor.png");
 }
 
 .pata:hover~.on::before {
@@ -172,7 +172,7 @@ body {
 }
 
 .containerPatas li.active {
-    background: url("../assets/pata-pintada-menor.png") no-repeat;
+    background: url("/assets/pata-pintada-menor.png") no-repeat;
     background-size: 100%;
 }
 

@@ -14,6 +14,8 @@ document.addEventListener('click', function (e) {
     console.log(e.target.getAttribute('data-avaliacao')) // avaliação p/ banco de dados
 })
 
+
+
 //botão menu
 let btnMenu = document.querySelector('.icone-menu');
 let nav = document.querySelector('.nav');
@@ -22,3 +24,31 @@ function handleButtonClick(){
     nav.classList.toggle("active");
 }
 btnMenu.addEventListener("click",handleButtonClick);
+
+
+
+
+// Recuperando gatos do localStorage
+const gatosSalvos = JSON.parse(localStorage.getItem("cadastroGato"));
+console.log(gatosSalvos)
+
+/*
+
+gatosSalvos.forEach((avata)=>{
+    const fotoAvata = document.querySelector("#avata");
+    const nomeAvata = document.querySelector("h1");
+
+    nomeAvata.textContent = avata.nomeGato;
+    fotoAvata.setAttribute("src", avata.foto);    
+})
+*/
+
+const fotoAvata = document.querySelector("#avata");
+const nomeAvata = document.querySelector("h1");
+for (let i = 0; i < gatosSalvos.length; i++) {
+    
+    nomeAvata.textContent = gatosSalvos[1].nomeGato;
+    fotoAvata.setAttribute("src", gatosSalvos[1].foto);
+    console.log(nomeAvata)
+    console.log(fotoAvata)
+}
