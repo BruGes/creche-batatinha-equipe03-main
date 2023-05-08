@@ -1,0 +1,253 @@
+/*
+@import url(_reset.css);
+@import url(_variaveis.css);
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F5F5F5;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1440px;
+    height: 84px;
+    background-color: #fff;
+    margin-bottom: 25px;
+}
+
+.cabecalho div,
+.cabecalho figure {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    width: 373px;
+    height: 46px;
+}
+
+.cabecalho figure {
+    width: 170px;
+}
+
+.cabecalho a label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    width: 170px;
+}
+
+/* componentes */
+
+
+.linha {
+    position: absolute;
+    bottom: 0;
+    background-color: #DAD9D9;
+    width: 100%;
+    height: 1px;
+}
+
+.seta {
+    background-image: url(../assets/arrow_left_purple.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 100px;
+    border: solid 2px #EB339B;
+    cursor: pointer;
+}
+
+.seta:hover {
+    background-color: #9F9F9F;
+    background-image: url(../assets/arrow_left_white.png);
+}
+
+.seta:active {
+    background-color: #EB339B;
+    background-image: url(../assets/arrow_left_white.png);
+}
+
+/*fim componentes*/
+.avaliacao {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+/*Titulo*/
+.title-lacamento-notas {
+    margin-bottom: 2rem;
+}
+
+.linha-title {
+    position: absolute;
+    background-color: #DAD9D9;
+    width: 100%;
+    height: 1px;
+    bottom: -2rem;
+}
+
+.logo-gato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 18%;
+}
+
+.logo-gato img {
+    width: 56px;
+    height: 56px;
+    border: 2px solid #FFFFFF;
+    border-radius: 100px;
+}
+
+.data {
+    color: #5A5A5A;
+}
+
+/*======================================*/
+
+
+/* container do texto e patas*/
+.container-text-patas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo-pergunta {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-avaliacao h3 {
+    font-size: 24px;
+}
+
+.text-avaliacao p {
+    font-size: 16px;
+}
+
+
+/* Seleção das patas*/
+.containerPatas {
+    display: flex;
+    flex-direction: row-reverse;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.pata {
+    background: url('../assets/pata-nao-pintada-menor.png') no-repeat;
+    background-size: 100%;
+    width: 45px;
+    height: 42px;
+    transition: all 0.3s ease;
+}
+
+.containerPatas:hover .on::before {
+    content: url("../assets/pata-pintada-menor.png");
+}
+
+.pata:hover~.on::before {
+    content: "";
+}
+
+.oculta {
+    /*uma pata escondida para poder apagar todas*/
+    position: absolute;
+    width: 25px;
+    height: 42px;
+    right: -25px;
+    opacity: 0;
+}
+
+.containerPatas li.active {
+    background: url("../assets/pata-pintada-menor.png") no-repeat;
+    background-size: 100%;
+}
+
+/*=========Responsivo==========
+*/
+@media(max-width: 720px) {
+    .card {
+        max-width: 370px;
+        margin: 0 auto;
+    }
+
+    .title-lacamento-notas {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title-lacamento-notas a {
+        width: 80px;
+    }
+
+    .logo-gato {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 80px;
+        height: 100%;
+    }
+
+    .data {
+        width: 80px;
+    }
+
+    .avaliacao {
+        flex-direction: column;
+        height: 120px;
+        text-align: center;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .cabecalho figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+    }
+
+    .cabecalho figure img {
+        width: 110px;
+    }
+
+    .cabecalho div {
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        width: 260px;
+    }
+
+    .cabecalho a label {
+        width: 120px;
+        font-size: 12px;
+    }
+
+    .botao-responsivo {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+/*
+@media(min-width: 1200px) {
+    .container {
+        padding-left: calc((100vw - 900px)/2);
+        padding-right: calc((100vw - 900px)/2);
+    }
+}
