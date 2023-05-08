@@ -13,3 +13,12 @@ document.addEventListener('click', function (e) {
     })
     console.log(e.target.getAttribute('data-avaliacao')) // avaliação p/ banco de dados
 })
+
+//botão menu
+let btnMenu = document.querySelector('.icone-menu');
+let nav = document.querySelector('.nav');
+
+function handleButtonClick(){
+    nav.classList.toggle("active");
+}
+btnMenu.addEventListener("click",handleButtonClick);

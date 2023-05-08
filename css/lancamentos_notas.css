@@ -14,15 +14,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-a {
-    text-decoration: none;
-    color: #EB339B;
-}
-
-a:hover {
-    color: #fff;
-}
-
 .cabecalho {
     display: flex;
     justify-content: space-around;
@@ -55,22 +46,7 @@ a:hover {
 }
 
 /* componentes */
-.card {
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    box-shadow: 0 5px 10px darkgray;
-    max-width: 752px;
-    padding: 1.75rem;
-    margin: 0 auto;
-}
 
-.container {
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
 
 .linha {
     position: absolute;
@@ -78,26 +54,6 @@ a:hover {
     background-color: #DAD9D9;
     width: 100%;
     height: 1px;
-}
-
-.botao {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    width: 46.5%;
-    height: 44px;
-    border: solid 2px #EB339B;
-    border-radius: 3px;
-    cursor: pointer;
-    color: #EB339B;
-}
-
-.botao:hover {
-    background-color: #9F9F9F;
-    color: #fff;
-}
-
-.botao:active {
-    background-color: #EB339B;
 }
 
 .seta {
