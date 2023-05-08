@@ -1,46 +1,45 @@
-// Objeto com dados dos gatos
-const gatos = [
+const cadastroGato = [
     {
-        nome: "Garfield",
-        foto: "https://i.imgur.com/LcfhvlR.png",
-        dono: "Jon Arbuckle"
+        nomeGato: "Tom",
+        foto: "https://i.imgur.com/8aD8Yn2.jpg"
     },
     {
-        nome: "Salem",
-        foto: "https://i.imgur.com/c4at321.jpg",
-        dono: "Sabrina Spellman"
+        nomeGato: "Whiskers",
+        foto: "https://i.imgur.com/vV7BOdY.jpg"
     },
     {
-        nome: "Tom",
-        foto: "https://i.imgur.com/lYq2QJS.png",
-        dono: "Sr. Jingles"
+        nomeGato: "Snowball",
+        foto: "https://i.imgur.com/nZBQ2yG.jpg"
     }
 ];
 
-// Loop para adicionar cada gato na lista
-const ul = document.querySelector('.miaus-cadastrados');
-gatos.forEach((gato) => {
-    const li = document.createElement('li');
+// Armazenando gatos no localStorage
+localStorage.setItem('cadastroGato', JSON.stringify(cadastroGato))
 
-    // Adicionando a foto do gato
-    const img = document.createElement('img');
-    img.src = gato.foto;
-    li.appendChild(img);
+const miausCadastrados = document.querySelector(".miaus-cadastrados");
 
-    // Adicionando o nome do gato
-    const nomeGato = document.createElement('p');
+// Recuperando gatos do localStorage
+const gatosSalvos = JSON.parse(localStorage.getItem("cadastroGato"));
+
+// Gerando um novo item da lista para cada gato
+gatosSalvos.forEach((gato) => {
+    const novoItemLista = document.createElement("li");
+    const imagemGato = document.createElement("img");
+    const nomeGato = document.createElement("span");
+    const botaoLancarNotas = document.createElement("button");
+
+    imagemGato.setAttribute("src", gato.foto);
     nomeGato.textContent = gato.nome;
-    li.appendChild(nomeGato);
+    botaoLancarNotas.textContent = "Lançar Notas";
 
-    // Adicionando o botão para lançar notas
-    const lancarNotasBtn = document.createElement('button');
-    lancarNotasBtn.textContent = 'Lançar Notas';
-    li.appendChild(lancarNotasBtn);
+    novoItemLista.appendChild(imagemGato);
+    novoItemLista.appendChild(nomeGato);
+    novoItemLista.appendChild(botaoLancarNotas);
 
-    // Redirecionando para a página de notas ao clicar no botão
-    lancarNotasBtn.addEventListener('click', () => {
-        window.location.href = 'notas.html';
+    miausCadastrados.appendChild(novoItemLista);
+
+    // Redirecionando para outra página ao clicar no botão Lançar Notas
+    botaoLancarNotas.addEventListener("click", () => {
+        window.location.href = "../lancamento_notas/index.html";
     });
-
-    ul.appendChild(li);
 });
