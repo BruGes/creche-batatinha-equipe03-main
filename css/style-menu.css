@@ -1,6 +1,7 @@
 :root {
     --rosa: #EB339B;
-    --branco: #ffffff;
+    --branco: #FFFFFF;
+    --background: #F5F5F5;
     --montserrat: 'Montserrat', sans-serif;
     --roboto: 'Roboto', sans-serif;
     --cinzaclaro:  #F5F5F5;
@@ -19,7 +20,7 @@
 
 .logo-claro {
     height: 180px;
-    margin-left: 50%;
+    
 }
 
 .logo-rosa {
@@ -36,25 +37,21 @@
     padding: 40px;
 }
 
-.nav {
+.nav{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-right: 10%;
-
-
+    
 }
-
-.btn {
+.btn{
     padding: 10px 20px;
-    font-family: var(--roboto);
+    font-family: 'Roboto';
     font-weight: 400;
     font-size: 16px;
     align-items: center;
     text-align: center;
     margin: 10px;
     text-decoration: none;
-
 }
 
 .lista {
@@ -69,4 +66,64 @@
     color: var(--branco);
     border-radius: 4px;
     border: 2px solid var(--rosa);
+}
+.menu{
+    display: none;
+}
+@media(max-width:768px){
+    .menu-container{
+        height: 120px;
+        margin:none;
+        
+    }
+    .logo{
+        margin-left: 0;
+        display: flex;
+    }
+    
+   .front-text{
+    font-size: 32px;
+    flex-shrink: 2;
+   }
+   .minor-text{
+    font-size: 24px;
+   }
+   .menu{
+    display: flex;
+    font-family: 'Montserrat';
+   }
+  
+    .icone-menu{
+        border-top: 0.125rem solid;
+        width: 1.25rem;
+        position: relative;
+        left: 5%;
+        
+    }
+    .icone-menu::before,
+    .icone-menu::after{
+        content:  " ";
+        display: block;
+        width: 1.25rem;
+        height: 0.125rem;
+        background-color: currentColor;
+        margin-top: 0.3125rem;
+    }
+    .nav{
+        display: none;
+        background-color: #ffffff;
+        position: absolute;
+        top: 13%;
+        left: 0;
+        width: 100%;
+    }
+    .nav a{
+        width: 100%;
+    }
+    .active{
+        display: flex;
+        transition: 1s;
+        font-family: 'Montserrat';
+    }
+    
 }
