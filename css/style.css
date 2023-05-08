@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    min-width: 324px;
+}
 body{
     background: #F5F5F5;
     display: flexbox;
@@ -20,4 +23,7 @@ body{
     margin-top: 1%;
     font-size: 48px;
     color: rgba(17, 17, 17, 0.48);
+}
+@media screen and (max-width:768px){
+    
 }
