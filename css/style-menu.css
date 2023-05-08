@@ -7,7 +7,6 @@
     --cinzaclaro: #F5F5F5;
     --cinzaescuro: #9F9F9F;
 }
-
 * {
     padding: 0;
     margin: 0;
@@ -59,10 +58,8 @@
     position: relative;
 }
 @media(max-width:768px) {
-    
     .menu-container {
         height: 120px;
-        
     }
     .logo {
         margin-left: 0;
@@ -78,7 +75,6 @@
    .menu{
     display: flex;
     font-family: 'Montserrat';
-       
    }
     .icone-menu {
         border-top: 0.125rem solid;
@@ -95,16 +91,13 @@
         background-color: currentColor;
         margin-top: 0.3125rem;
     }
-
     .nav {
         display: none;
         background-color: #ffffff;
         width: 100%;
         position: relative;
-        bottom: 0;
-        
+        bottom: 0;   
     }
-
     .nav a {
         width: 100%;
     }
@@ -113,7 +106,6 @@
         flex-direction: column;
         transition: 1s;
         font-family: 'Montserrat';
-        padding-bottom: 2%;
-        
+        padding-bottom: 2%;   
     }
 }
