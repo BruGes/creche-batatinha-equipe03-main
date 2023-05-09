@@ -16,4 +16,6 @@ btn2.addEventListener('click', function () {
   // Salva o objeto no cache do navegador
   localStorage.setItem('cadastroGato', JSON.stringify(cadastroGato));
   console.log(cadastroGato)
+  alert('Gato salvo com sucesso!');
+  
 });
