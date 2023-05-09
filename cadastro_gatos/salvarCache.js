@@ -13,9 +13,24 @@ btn2.addEventListener('click', function () {
     foto: localStorage.getItem('previewImage')
   }
 
-  // Salva o objeto no cache do navegador
-  localStorage.setItem('cadastroGato', JSON.stringify(cadastroGato));
-  console.log(cadastroGato)
-  alert('Gato salvo com sucesso!');
-  
+ // Verifica se o objeto já existe no localStorage
+const storedCadastroGato = localStorage.getItem('cadastroGato');
+if (storedCadastroGato !== null) {
+  const parsedCadastroGato = JSON.parse(storedCadastroGato);
+  if (parsedCadastroGato.nomeGato === cadastroGato.nomeGato 
+      && parsedCadastroGato.nomeDona === cadastroGato.nomeDona ) {
+    // Exibe um alerta informando que o gato já foi cadastrado
+    alert('Erro: o gato já foi cadastrado.');
+    return;
+  }
+}
+
+// Salva o objeto no cache do navegador
+localStorage.setItem('cadastroGato', JSON.stringify(cadastroGato));
+console.log(cadastroGato);
+
+// Exibe um alerta informando que o gato foi salvo com sucesso
+alert('Gato salvo com sucesso!');
+
+
 });
