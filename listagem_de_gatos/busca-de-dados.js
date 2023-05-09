@@ -1,46 +1,25 @@
-// Objeto com dados dos gatos
-const gatos = [
-    {
-        nome: "Garfield",
-        foto: "https://i.imgur.com/LcfhvlR.png",
-        dono: "Jon Arbuckle"
-    },
-    {
-        nome: "Salem",
-        foto: "https://i.imgur.com/c4at321.jpg",
-        dono: "Sabrina Spellman"
-    },
-    {
-        nome: "Tom",
-        foto: "https://i.imgur.com/lYq2QJS.png",
-        dono: "Sr. Jingles"
-    }
-];
+const miausCadastrados = document.querySelector(".miaus-cadastrados");
 
-// Loop para adicionar cada gato na lista
-const ul = document.querySelector('.miaus-cadastrados');
-gatos.forEach((gato) => {
-    const li = document.createElement('li');
+// Buscando gatos no localStorage
+const cadastroGato = JSON.parse(localStorage.getItem("cadastroGato"));
+const foto = cadastroGato.foto;
+const nomeGato = cadastroGato.nomeGato;
 
-    // Adicionando a foto do gato
-    const img = document.createElement('img');
-    img.src = gato.foto;
-    li.appendChild(img);
+const novoItemLista = document.createElement("li");
+const imagemGato = document.createElement("img");
+const nomeGatoEl = document.createElement("span");
+const botaoLancarNotas = document.createElement("button");
 
-    // Adicionando o nome do gato
-    const nomeGato = document.createElement('p');
-    nomeGato.textContent = gato.nome;
-    li.appendChild(nomeGato);
+imagemGato.setAttribute("src", foto);
+nomeGatoEl.textContent = nomeGato;
 
-    // Adicionando o botão para lançar notas
-    const lancarNotasBtn = document.createElement('button');
-    lancarNotasBtn.textContent = 'Lançar Notas';
-    li.appendChild(lancarNotasBtn);
+botaoLancarNotas.textContent = "Lançar Notas";
 
-    // Redirecionando para a página de notas ao clicar no botão
-    lancarNotasBtn.addEventListener('click', () => {
-        window.location.href = 'notas.html';
-    });
+novoItemLista.appendChild(imagemGato);
+novoItemLista.appendChild(nomeGatoEl);
+novoItemLista.appendChild(botaoLancarNotas);
+miausCadastrados.appendChild(novoItemLista);
 
-    ul.appendChild(li);
+botaoLancarNotas.addEventListener("click", () => {
+    window.location.href = "../lancamento_notas/index.html";
 });

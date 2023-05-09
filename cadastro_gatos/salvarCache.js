@@ -4,8 +4,8 @@ const nomeDonaInput = document.getElementById('nome-dona');
 const btn2 = document.getElementById('btn2');
 
 // Adiciona um evento de clique ao botão
-btn2.addEventListener('click', function() {
-    event.preventDefault();// Adiciona o evento preventDefault() para impedir o redirecionamento
+btn2.addEventListener('click', function () {
+  event.preventDefault();// Adiciona o evento preventDefault() para impedir o redirecionamento
   // Cria um objeto com os valores dos campos de entrada
   const cadastroGato = {
     nomeGato: nomeGatoInput.value,
