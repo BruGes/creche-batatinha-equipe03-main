@@ -122,6 +122,7 @@ input {
     background-color: var(--rosa);
     color: white;
 }
+<<<<<<< HEAD
 
 @media screen and (max-width:1340px){
     
@@ -152,5 +153,20 @@ input {
             width: 100%;
             position: absolute;
         }
+=======
+@media screen and (max-width: 780px){
+    .container{
+        height: 650px;
+        width: 400px;
+    }
+    .botoes-cadastro{
+        width:150px ;
+        height: 44px;
+        margin-top: 5%;
+    }
+    #btn1{
+        padding: 11px 9px;
+    }
+>>>>>>> 5de1b1b7dc78ed15c86d2a905bdeb0d834d541d1
 
 }
