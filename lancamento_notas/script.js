@@ -26,11 +26,11 @@ document.addEventListener('click', function (e) {
 
 
 
-// pegando nomeGato, nomeDona, foto do localStorage
+// pegando todos os dados do localStorage
 const gatosSalvos = JSON.parse(localStorage.getItem("cadastroGato"));
 console.log(gatosSalvos)
 
-//variaveis para trabalhar com os dados
+//variaveis para comunicar com o html
 const fotoAvata = document.querySelector("#avata");
 const nomeAvata = document.querySelector("h1");
 const valorSocializacao = document.querySelectorAll("[data-socialicacao]")
@@ -40,11 +40,10 @@ const valorBrincadeiras = document.querySelectorAll("[data-brincadeiras]")
 const valorPreguicinha = document.querySelectorAll("[data-preguicinha]")
 const valorFotos = document.querySelectorAll("[data-fotos]")
 
-
-
 const salvar = document.querySelector("[data-botao]")
 
-//colocando os dados do storage nas tags
+
+//colocando os dados do storage no html
 fotoAvata.setAttribute("src", gatosSalvos.foto); 
 nomeAvata.textContent = gatosSalvos.nomeGato;
 valorSocializacao.textContent = gatosSalvos.socializacao;
@@ -54,14 +53,16 @@ valorBrincadeiras.textContent = gatosSalvos.brincadeiras;
 valorPreguicinha.textContent = gatosSalvos.preguicinha;
 valorFotos.textContent = gatosSalvos.avaliacaoFotos;
 
-//pegando as avaliações das patas
+
+//pegando as avaliações/notas das patas com o click e target
 document.addEventListener('click',function (element) {
-var socializacao;
-var soneca;
-var alimentacao;
-var brincadeiras;
-var preguicinha;
-var avaliacaoFotos;
+//não conseguir armazenar as let    
+let socializacao;
+let soneca;
+let alimentacao;
+let brincadeiras;
+let preguicinha;
+let avaliacaoFotos;
 
 socializacao =  element.target.getAttribute('data-socialicacao')
 soneca =  element.target.getAttribute('data-soneca')
@@ -70,18 +71,10 @@ brincadeiras =  element.target.getAttribute('data-brincadeiras')
 preguicinha =  element.target.getAttribute('data-preguicinha')
 avaliacaoFotos =  element.target.getAttribute('data-fotos')
 
-console.log(socializacao)
-console.log(soneca)
-console.log(alimentacao)
-console.log(brincadeiras)
-console.log(preguicinha)
-console.log(avaliacaoFotos)
-console.log("===========================================")
 
-//falta terminar a lógica e enviar para o localStorage, a nota da seleção das patas.
-salvar.addEventListener('click', function () {
-  event.preventDefault();// Adiciona o evento preventDefault() para impedir o redirecionamento
-  // Cria um objeto com os valores dos campos de entrada
+//enviar para o localStorage as avaliações das patas.
+salvar.addEventListener('click',(event)=> {
+  event.preventDefault();
   const cadastroGato = {
     nomeGato: gatosSalvos.nomeGato,
     nomeDona: gatosSalvos.nomeDona,
@@ -94,14 +87,12 @@ salvar.addEventListener('click', function () {
     avaliacaoFotos:avaliacaoFotos,
   }
 
-// Salva o objeto no cache do navegador
+// Salvando o objeto no cache do navegador
   localStorage.setItem('cadastroGato', JSON.stringify(cadastroGato));
-  console.log(`${cadastroGato} ======= gato enviado com sucesso`)
+  window.location.href = "index.html";
 })
 
 })
-
-
 
 
 
