@@ -26,23 +26,88 @@ document.addEventListener('click', function (e) {
 
 
 
-// pegando foto e nome do gato no localStorage
+// pegando nomeGato, nomeDona, foto do localStorage
 const gatosSalvos = JSON.parse(localStorage.getItem("cadastroGato"));
 console.log(gatosSalvos)
 
+//variaveis para trabalhar com os dados
 const fotoAvata = document.querySelector("#avata");
 const nomeAvata = document.querySelector("h1");
+const valorSocializacao = document.querySelectorAll("[data-socialicacao]")
+const valorSoneca = document.querySelectorAll("[data-soneca]")
+const valorAlimentacao = document.querySelectorAll("[data-alimentacao]")
+const valorBrincadeiras = document.querySelectorAll("[data-brincadeiras]")
+const valorPreguicinha = document.querySelectorAll("[data-preguicinha]")
+const valorFotos = document.querySelectorAll("[data-fotos]")
 
+
+
+const salvar = document.querySelector("[data-botao]")
+
+//colocando os dados do storage nas tags
 fotoAvata.setAttribute("src", gatosSalvos.foto); 
 nomeAvata.textContent = gatosSalvos.nomeGato;
+valorSocializacao.textContent = gatosSalvos.socializacao;
+valorSoneca.textContent = gatosSalvos.soneca;
+valorAlimentacao.textContent = gatosSalvos.alimentacao;
+valorBrincadeiras.textContent = gatosSalvos.brincadeiras;
+valorPreguicinha.textContent = gatosSalvos.preguicinha;
+valorFotos.textContent = gatosSalvos.avaliacaoFotos;
 
+//pegando as avaliações das patas
+document.addEventListener('click',function (element) {
+var socializacao;
+var soneca;
+var alimentacao;
+var brincadeiras;
+var preguicinha;
+var avaliacaoFotos;
 
+socializacao =  element.target.getAttribute('data-socialicacao')
+soneca =  element.target.getAttribute('data-soneca')
+alimentacao =  element.target.getAttribute('data-alimentacao')
+brincadeiras =  element.target.getAttribute('data-brincadeiras')
+preguicinha =  element.target.getAttribute('data-preguicinha')
+avaliacaoFotos =  element.target.getAttribute('data-fotos')
+
+console.log(socializacao)
+console.log(soneca)
+console.log(alimentacao)
+console.log(brincadeiras)
+console.log(preguicinha)
+console.log(avaliacaoFotos)
+console.log("===========================================")
 
 //falta terminar a lógica e enviar para o localStorage, a nota da seleção das patas.
-document.addEventListener('click',function (element) {
-    const socializacao =  element.target.getAttribute('data-socialicacao')
-    console.log(socializacao)
+salvar.addEventListener('click', function () {
+  event.preventDefault();// Adiciona o evento preventDefault() para impedir o redirecionamento
+  // Cria um objeto com os valores dos campos de entrada
+  const cadastroGato = {
+    nomeGato: gatosSalvos.nomeGato,
+    nomeDona: gatosSalvos.nomeDona,
+    foto: gatosSalvos.foto,
+    socializacao:socializacao,
+    soneca:soneca,
+    alimentacao:alimentacao,
+    brincadeiras:brincadeiras,
+    preguicinha:preguicinha,
+    avaliacaoFotos:avaliacaoFotos,
+  }
+
+// Salva o objeto no cache do navegador
+  localStorage.setItem('cadastroGato', JSON.stringify(cadastroGato));
+  console.log(`${cadastroGato} ======= gato enviado com sucesso`)
 })
+
+})
+
+
+
+
+
+
+
+
 
 //===============tenta recuperar a nota/avaliação dos animais==============
 /*
